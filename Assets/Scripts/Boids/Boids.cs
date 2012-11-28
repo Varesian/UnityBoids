@@ -20,14 +20,11 @@ public class Boids : MonoBehaviour {
 	public Vector3 center = Vector3.zero;
 	
 	private Boid[] boidsarray;
-	//private Vector3[] boidsvelocity;
-	//private Vector3 flockLeaderVelocity;
 	
 	// Use this for initialization
 	void Start () {
 
 		boidsarray = new Boid[number_of_boids];
-		//boidsvelocity = new Vector3[number_of_boids];
 		if (!stationaryCenter) {
 			center = Vector3.zero;	
 		} else {
@@ -39,11 +36,7 @@ public class Boids : MonoBehaviour {
 			b.transform.parent = transform;
 			b.transform.localScale = Vector3.one;
 			boidsarray[i] = b; 
-			//b.velocity = flockInitialVelocity;
 		}	
-		
-		//flockInitialVelocity = Vector3.Normalize(flockInitialVelocity);
-		
 	}
 	
 	void Update () {
